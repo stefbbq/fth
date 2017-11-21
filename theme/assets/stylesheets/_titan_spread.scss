@@ -1,0 +1,43 @@
+html { 
+	min-height:100%;
+	position:relative;;
+}
+
+body { 
+	margin: 0px;
+	background-color: black;
+	background-image: url(../images/titan_spread/background_repeat.jpg);
+	background-position: center top;
+	background-repeat: repeat-x;
+	height: 100%;
+	
+	.background-wrapper {
+		position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+		z-index: -9999;
+		background: url(../images/titan_spread/background.jpg) center top no-repeat;
+	}
+	
+	.content {
+		color: white;
+		padding-top: 1000px;
+		margin: 0px auto;
+		width: 1200px;
+		
+		
+		.sub-content {
+			position: relative;
+			z-index: 1000;
+		}
+	}
+}
+
+canvas {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}

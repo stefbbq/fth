@@ -1,0 +1,18 @@
+doctype html
+html
+  head= render_partial("layouts/head")
+  body.
+			<?php
+			  while ( have_posts() ) : the_post(); ?>
+			    <div class="content" id="content">
+			        <?php the_content(); ?>
+			    </div>
+			  <?php
+			  endwhile;
+			  wp_reset_query(); ?>
+			
+		.background-wrapper
+      = render_partial("layouts/header")
+	    .page-wrapper
+
+	    - wp_footer()

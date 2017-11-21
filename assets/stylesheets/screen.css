@@ -1,0 +1,313 @@
+@font-face {
+  font-family: FuturaLt;
+  src: url("../fonts/FuturaStd-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/FuturaStd-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaStd-Light.woff") format("woff"), url("../fonts/FuturaStd-Light.ttf") format("truetype"), url("../fonts/FuturaStd-Light.svg#d83a536671d160add994a83c5144bd9a") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: FuturaMd;
+  src: url("../fonts/FuturaStd-Medium.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/FuturaStd-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaStd-Medium.woff") format("woff"), url("../fonts/FuturaStd-Medium.ttf") format("truetype"), url("../fonts/FuturaStd-Medium.svg#978bfeb47c41e9c6da434cb6375bf283") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: FuturaBold;
+  src: url("../fonts/FuturaStd-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/FuturaStd-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaStd-Bold.woff") format("woff"), url("../fonts/FuturaStd-Bold.ttf") format("truetype"), url("../fonts/FuturaStd-Bold.svg#e6614ac1ffeb97962de474601fd3ce1d") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: FuturaBookOb;
+  src: url("../fonts/FuturaStd-BookOblique.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/FuturaStd-BookOblique.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaStd-BookOblique.woff") format("woff"), url("../fonts/FuturaStd-BookOblique.ttf") format("truetype"), url("../fonts/FuturaStd-BookOblique.svg#e5aaccfa75b4050fd08ee20229c6009f") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: FuturaBook;
+  src: url("../fonts/FuturaStd-Book.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/FuturaStd-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaStd-Book.woff") format("woff"), url("../fonts/FuturaStd-Book.ttf") format("truetype"), url("../fonts/FuturaStd-Book.svg#db02aa682b3e193ac55da3558b4b0d6e") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: HelveticaRoman;
+  src: url("../fonts/HelveticaNeueLTStd-Roman.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/HelveticaNeueLTStd-Roman.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLTStd-Roman.woff") format("woff"), url("../fonts/HelveticaNeueLTStd-Roman.ttf") format("truetype"), url("../fonts/HelveticaNeueLTStd-Roman.svg#06ce8507218b5fc98ef98a8271373604") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: HelveticaBold;
+  src: url("../fonts/HelveticaNeueLTStd-Bd.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/HelveticaNeueLTStd-Bd.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLTStd-Bd.woff") format("woff"), url("../fonts/HelveticaNeueLTStd-Bd.ttf") format("truetype"), url("../fonts/HelveticaNeueLTStd-Bd.svg#5971a26102354d59c0f922ff596bc172") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Helvetica;
+  src: url("../fonts/HelveticaNeueLTStd-Md.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/HelveticaNeueLTStd-Md.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLTStd-Md.woff") format("woff"), url("../fonts/HelveticaNeueLTStd-Md.ttf") format("truetype"), url("../fonts/HelveticaNeueLTStd-Md.svg#297525cf3c6ba1ff86516c4aa7d9abf5") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+}
+/* line 1, ../../theme/assets/stylesheets/_titan_spread.scss */
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+/* line 6, ../../theme/assets/stylesheets/_titan_spread.scss */
+body {
+  margin: 0px;
+  background-color: black;
+  background-image: url(../images/titan_spread/background_repeat.jpg);
+  background-position: center top;
+  background-repeat: repeat-x;
+  height: 100%;
+}
+/* line 14, ../../theme/assets/stylesheets/_titan_spread.scss */
+body .background-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: -9999;
+  background: url(../images/titan_spread/background.jpg) center top no-repeat;
+}
+/* line 25, ../../theme/assets/stylesheets/_titan_spread.scss */
+body .content {
+  color: white;
+  padding-top: 1000px;
+  margin: 0px auto;
+  width: 1200px;
+}
+/* line 32, ../../theme/assets/stylesheets/_titan_spread.scss */
+body .content .sub-content {
+  position: relative;
+  z-index: 1000;
+}
+
+/* line 39, ../../theme/assets/stylesheets/_titan_spread.scss */
+canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+/* line 2, ../../theme/assets/stylesheets/_site_header.scss */
+#border {
+  width: calc(100vw - 2vw);
+  height: calc(100vh - 2vh);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  color: white;
+}
+/* line 9, ../../theme/assets/stylesheets/_site_header.scss */
+#border .patch {
+  width: 100px;
+  height: 100px;
+  background-image: url(../images/titan_spread/patch.png);
+  background-size: cover;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+/* line 19, ../../theme/assets/stylesheets/_site_header.scss */
+#border-faded {
+  width: calc(100vw - 2vw + 15px);
+  height: calc(100vh - 2vh + 15px);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+  color: white;
+}
+
+/* line 27, ../../theme/assets/stylesheets/_site_header.scss */
+#menu {
+  width: 100vw;
+  height: 150px;
+  top: 44vh;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+/* line 35, ../../theme/assets/stylesheets/_site_header.scss */
+#menu li {
+  display: inline-block;
+  margin: 55px 30px 0 30px;
+}
+/* line 39, ../../theme/assets/stylesheets/_site_header.scss */
+#menu li a {
+  font-family: FuturaLt;
+  font-size: 16px;
+  letter-spacing: .4em;
+  color: white;
+  opacity: .5;
+  text-decoration: none;
+  margin-top: 30px;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: .5s;
+  animation-timing-function: ease-in-out;
+}
+/* line 52, ../../theme/assets/stylesheets/_site_header.scss */
+#menu li a:hover {
+  opacity: 1;
+  transform: scale(1.15);
+  transform-origin: 50% 50%;
+  letter-spacing: .6em;
+  transition: .2s;
+  animation-timing-function: ease-in-out;
+}
+/* line 63, ../../theme/assets/stylesheets/_site_header.scss */
+#menu .social-items {
+  position: absolute;
+  right: 7vw;
+  bottom: -7px;
+}
+/* line 68, ../../theme/assets/stylesheets/_site_header.scss */
+#menu .social-items a {
+  opacity: .5;
+  margin: 0 -20px;
+  transform: scale(0.4);
+  display: inline-block;
+  animation-timing-function: ease-in-out;
+  transition: .4s;
+}
+/* line 76, ../../theme/assets/stylesheets/_site_header.scss */
+#menu .social-items a:hover {
+  transform: scale(0.5);
+  opacity: 1;
+  animation-timing-function: ease-in-out;
+  transition: .2s;
+}
+
+/* line 7, ../../theme/assets/stylesheets/screen.sass */
+.page-wrapper {
+  width: 960px;
+  margin: 0 auto;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 13px;
+  color: #333;
+}
+/* line 16, ../../theme/assets/stylesheets/screen.sass */
+.page-wrapper section.site-content {
+  padding: 20px;
+}
+/* line 19, ../../theme/assets/stylesheets/screen.sass */
+.page-wrapper section.site-content h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #777;
+}
+/* line 3, ../../theme/assets/stylesheets/_tinymce.sass */
+.page-wrapper section.site-content .aligncenter, .page-wrapper section.site-content dl.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 9, ../../theme/assets/stylesheets/_tinymce.sass */
+.page-wrapper section.site-content .alignleft {
+  float: left;
+}
+/* line 12, ../../theme/assets/stylesheets/_tinymce.sass */
+.page-wrapper section.site-content .alignright {
+  float: right;
+}
+/* line 15, ../../theme/assets/stylesheets/_tinymce.sass */
+.page-wrapper section.site-content .wp-caption {
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: #f3f3f3;
+  padding-top: 4px;
+  margin: 10px 0;
+}
+/* line 22, ../../theme/assets/stylesheets/_tinymce.sass */
+.page-wrapper section.site-content .wp-caption img {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  -apple-user-drag: none;
+  -khtml-user-drag: none;
+  -webkit-user-drag: none;
+}
+/* line 30, ../../theme/assets/stylesheets/_tinymce.sass */
+.page-wrapper section.site-content .wp-caption-dd {
+  font-size: 11px;
+  line-height: 17px;
+  padding: 0 4px 5px;
+  margin: 0;
+}
+/* line 36, ../../theme/assets/stylesheets/_tinymce.sass */
+.page-wrapper section.site-content pre {
+  font: 12px/18px Consolas, Monaco, monospace;
+}
+/* line 39, ../../theme/assets/stylesheets/_tinymce.sass */
+.page-wrapper section.site-content td {
+  color: #000;
+  font-size: 11px;
+  margin: 8px;
+}
+/* line 44, ../../theme/assets/stylesheets/_tinymce.sass */
+.page-wrapper section.site-content strong {
+  font-weight: strong;
+}
+/* line 47, ../../theme/assets/stylesheets/_tinymce.sass */
+.page-wrapper section.site-content em, .page-wrapper section.site-content i {
+  font-style: italic;
+}
+/* line 1, ../../theme/assets/stylesheets/_post.sass */
+.page-wrapper section.site-content .post {
+  margin-bottom: 20px;
+}
+/* line 4, ../../theme/assets/stylesheets/_post.sass */
+.page-wrapper section.site-content .post header {
+  margin-bottom: 10px;
+}
+/* line 7, ../../theme/assets/stylesheets/_post.sass */
+.page-wrapper section.site-content .post header h3 {
+  font-size: 15px;
+  font-weight: bold;
+}
+/* line 11, ../../theme/assets/stylesheets/_post.sass */
+.page-wrapper section.site-content .post header h3 a {
+  color: #355593;
+  text-decoration: none;
+}
+/* line 15, ../../theme/assets/stylesheets/_post.sass */
+.page-wrapper section.site-content .post strong, .page-wrapper section.site-content .post b {
+  font-weight: bold;
+}
+/* line 18, ../../theme/assets/stylesheets/_post.sass */
+.page-wrapper section.site-content .post sub {
+  font-size: xx-small;
+  vertical-align: sub;
+}
+/* line 22, ../../theme/assets/stylesheets/_post.sass */
+.page-wrapper section.site-content .post sup {
+  font-size: xx-small;
+  vertical-align: super;
+}

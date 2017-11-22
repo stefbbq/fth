@@ -5,7 +5,9 @@ html
 			<?php
 			  while ( have_posts() ) : the_post(); ?>
 			    <div class="content" id="content">
+						<div class="wrapper">
 			        <?php the_content(); ?>
+						</div>
 			    </div>
 			  <?php
 			  endwhile;

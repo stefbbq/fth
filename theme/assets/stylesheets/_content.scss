@@ -1,0 +1,216 @@
+.content {
+	margin-top: 900px;
+	background: rgba(black, .75);
+	height: 1300px;
+	
+	.wrapper {
+		color: white;
+		margin: 0px auto;
+		width: 1200px;
+		text-align: center;
+		
+		.aligncenter {
+			margin: 0px auto;
+			display: block;
+		}
+		.blocks {
+			display: table;
+			margin: 0px auto;
+		}
+		.front-content {
+			position: relative;
+			z-index: 1000;
+		}
+		
+		//upper blocks
+		.cta-block {
+			margin-top: -100px;
+			width: 300px;
+			height: 100px;
+			display: inline-block;
+			text-transform: uppercase;
+			text-align: center;
+			vertical-align: top;
+			
+			a {
+				text-decoration: none;
+				color: $primary-text-color;
+				font-family: FuturaLT;
+				cursor: pointer;
+				overflow: hidden;
+				
+				.cta, .title, .hidden-text {
+					transition: .2s;
+					animation-timing-function: ease-in-out;
+				}
+				.cta {
+					font-size: 16px;
+					letter-spacing: .7em;	
+					opacity: .75;
+				}
+				.title {
+					margin-top: -8px;
+					padding-top: 3px;
+					display: block;
+					font-size: 60px;
+					
+				}
+				.hidden-text { 
+					opacity: 0;
+					font-size: 14px;
+					font-family: FuturaMD;
+					letter-spacing: .3em;
+					color: $secondary-text-color;
+					text-transform: lowercase;
+				}
+
+				&:hover { 
+					.cta, .title {
+						color: white;
+						opacity: 1;
+						transition: .3s;
+						animation-timing-function: ease-out;	
+					}
+					.cta {
+						letter-spacing: 1em;
+						margin-right: -1em;
+					}
+					.title {
+						transform: scale(1.1);
+					}
+					.hidden-text {
+						opacity: 1;
+						transition: .3s;
+					}
+				}
+			}	
+
+			&.daybreak { 
+				text-align: right; 
+				margin-right: 30px;
+				
+				.cta {
+					font-size: 16px;
+					letter-spacing: .7em;	
+					margin-right: -.7em; 
+					opacity: .75;
+					
+				}
+				.title {
+					font-size: 60px;
+					opacity: .85;
+					transform-origin: 100% 15%;
+				}
+				
+			}
+			
+			&.trailer { 
+				text-align: left;
+				margin-left: 30px;
+				
+				.cta {
+					letter-spacing: .7em;	
+					opacity: .8;					
+				}
+				.title {
+					letter-spacing: .25em;
+					transform-origin: 0% 15%;
+				}
+			}
+			
+		}
+		.cta-block-divider {
+			opacity: .2;
+			margin: -55px 29px 0 32px;
+			display: inline-block;
+			vertical-align: top;
+			background: $primary-text-color;			
+			width: 1px;
+			height: 200px;
+			border-spacing: 20px;
+		}
+		
+		//newsletter
+		.newsletter {
+			margin-top: 120px;
+			padding-bottom: 300px;
+			
+			span {
+				font-family: FuturaLT;
+				color: $primary-text-color;
+				font-size: 34px;
+				text-transform: uppercase;
+				letter-spacing: .523em;
+				margin-right: -.523em;
+				
+				&:first-child {
+					font-size: 16px;
+					letter-spacing: 1em;
+					margin-left: -2px;
+					margin-right: -1em;
+				}
+			}
+			
+			form {
+				margin-top: 20px;
+				
+				input {
+					margin: 0 2px;
+					padding: 10px;
+					font-size: 18px;
+
+					border-radius: 6px;
+					background: transparent;
+					color: white;
+					text-transform: uppercase;
+					font-family: FuturaLT;
+					outline: none;
+					transition: .2s;					
+				}
+				
+				p {
+					color: white;
+					opacity: .5;
+					font-family: FuturaLT;
+				}
+				
+				input[type="email"]{
+					width: 360px;
+					letter-spacing: .25em;
+					background: rgba(black, .6);
+					border: 2px solid rgba($primary-text-color, .5);
+					&:hover {
+						border: 2px solid $primary-text-color;
+						transition: .05s;
+					}
+					&:focus {
+						border: 2px solid white;
+						transition: .15s;
+					}
+				}
+				input[type="submit"]{
+					cursor: pointer; 
+					letter-spacing: .1em;
+					padding: 10px 20px;
+					border: 2px solid $primary-text-color;
+					transition: .2s;
+					color: rgba($primary-text-color, .9);
+					
+					&:hover { 
+						background: rgba(white, .1);
+						border: 5px solid $primary-text-color;
+						transition: .15s; 
+						padding: 7px 17px;
+						color: rgba(white, .9);
+						animation-timing-function: ease-in-out;
+					}
+					&:focus {
+						color: white;
+						transition: .05s;
+						border: 5px solid white;
+					}
+				}
+			}
+		}
+	}
+}

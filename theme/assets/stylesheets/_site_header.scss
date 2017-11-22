@@ -1,32 +1,7 @@
-
-#border { 
-	width: calc(100vw - 2vw);
-	height: calc(100vh - 2vh);
-	border: 2px solid rgba(white, .4);
-	pointer-events: none;
-	color: white;
-	
-	.patch {
-		width: 100px;
-		height: 100px;
-		background-image: url(../images/titan_spread/patch.png);
-		background-size: cover;
-		position: absolute;
-		left: 20px;
-		bottom: 20px;
-	}
-}
-#border-faded { 
-	width: calc(100vw - 2vw + 15px);
-	height: calc(100vh - 2vh + 15px);
-	border: 2px solid rgba(white, .15);
-	pointer-events: none;
-	color: white;
-}
-
+//navigation
 #menu {
 	width: 100vw;
-	height: 150px;
+	height: 180px;
 	top: 44vh;
 	position: absolute;
 	background: rgba(black, .8);
@@ -34,7 +9,7 @@
 
 	li {
 		display: inline-block;
-		margin: 55px 30px 0 30px;
+		margin: 87px 30px 0 30px;
 		
 		a { 
 			font-family: FuturaLt;
@@ -55,7 +30,7 @@
 				transform-origin: 50% 50%;
 				letter-spacing: .6em;
 				transition: .2s;
-				animation-timing-function: ease-in-out;
+				animation-timing-function: ease-out;
 			}
 		}
 	}
@@ -76,9 +51,35 @@
 			&:hover {
 				transform: scale(.5);
 				opacity: 1;
-				animation-timing-function: ease-in-out;
+				animation-timing-function: ease-out;
 				transition: .2s;
 			}
 		}
 	}
+}
+
+//desktop border
+#border { 
+	width: calc(100vw - 60px);
+	height: calc(100vh - 60px);
+	border: 2px solid rgba(white, .4);
+	pointer-events: none;
+	color: white;
+	
+	.patch {
+		width: 100px;
+		height: 100px;
+		background-image: url(../images/titan_spread/patch.png);
+		background-size: cover;
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+	}
+}
+#border-faded { 
+	width: calc(100vw - 60px + 15px);
+	height: calc(100vh - 60px + 15px);
+	border: 2px solid rgba(white, .15);
+	pointer-events: none;
+	color: white;
 }

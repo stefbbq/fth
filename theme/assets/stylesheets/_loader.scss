@@ -1,0 +1,69 @@
+.shroud {
+	position: absolute;
+	z-index: 9999;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background: black;
+	
+	.a, .b, .c, .d,.e {
+		width: 152px;
+		height: 152px;
+		border-top: 3px solid white;
+		border-radius: 50%;
+		position: fixed;
+		top: calc(50% - 76px);
+		left: calc(50% - 76px);
+		transform-origin: 50% 50%;
+		animation: rotation 2.8s infinite linear;
+		opacity: .5;
+	}
+	
+	.b {
+		top: calc(50% - 72px);
+		left: calc(50% - 72px);		
+		width: 144px;
+		height: 144px;
+		animation: rotation 2.6s infinite linear;		
+		opacity: .65;
+	}
+	
+	.c {
+		top: calc(50% - 68px);
+		left: calc(50% - 68px);		
+		width: 136px;
+		height: 136px;
+		animation: rotation 2.4s infinite linear;		
+		opacity: .8;
+	}
+	
+	.d {
+		top: calc(50% - 64px);
+		left: calc(50% - 64px);		
+		width: 128px;
+		height: 128px;
+		animation: rotation 2.2s infinite linear;		
+		opacity: .9;
+	}
+	.e {
+		top: calc(50% - 60px);
+		left: calc(50% - 60px);		
+		width: 120px;
+		height: 120px;
+		animation: rotation 2s infinite linear;		
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes rotation {
+    0% 		{transform: rotate(0deg); border-color: rgba(white, 1);}
+    12.5% 		{transform: rotate(45deg); border-color: rgba(white, .5);}
+    25% 		{transform: rotate(90deg); border-color: rgba(white, 1);}
+    37.5% 		{transform: rotate(135deg); border-color: rgba(white, .5);}
+		50% 	{transform: rotate(180deg); border-color: rgba(white, 1);}
+    62.5% 		{transform: rotate(225deg); border-color: rgba(white, .5);}
+    75% 		{transform: rotate(270deg); border-color: rgba(white, 1);}
+    87.5% 		{transform: rotate(315deg); border-color: rgba(white, .5);}
+    100%  {transform: rotate(359deg); border-color: rgba(white, 1);}
+}

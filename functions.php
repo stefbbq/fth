@@ -9,18 +9,16 @@
 	
 		$menu = wp_get_nav_menu_object($args->menu);
 	
+		// social items
 		if( have_rows('social_items', $menu) ){
 			echo '<div class="social-items">';
+	    while ( have_rows('social_items', $menu) ) : the_row();
 
-		 	// loop through the rows of data
-		    while ( have_rows('social_items', $menu) ) : the_row();
+					$url = get_sub_field('url');
+					$icon = get_sub_field('icon', 'url');
+	        echo '<a class="social-link" target="_blank" href="' . $url . '"><img src="' . $icon . '"/></a>';
 
-		        // display a sub field value
-						$url = get_sub_field('url');
-						$icon = get_sub_field('icon', 'url');
-		        echo '<a class="social-link" target="_blank" href="' . $url . '"><img src="' . $icon . '"/></a>';
-
-		    endwhile;
+	    endwhile;
 			echo '</div>';
 			
 		}

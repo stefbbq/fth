@@ -16,5 +16,5 @@ html
 		.background-wrapper
       = render_partial("layouts/header")
 	    .page-wrapper
-
-	    - wp_footer()
+		= render_partial("layouts/loader")
+	  - wp_footer()

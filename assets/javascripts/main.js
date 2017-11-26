@@ -1,8 +1,13 @@
 $ = jQuery
 
-jQuery(document).ready(function(){
+$(document).ready(function(){
 	
 	// globals
+	var titanTex, titanMat, titanmesh, wordmarkTex, wordmarkMat, wordmarkMesh, saturnTex, saturnMat, saturnMesh, saturnBGTex, saturnBGMat, saturnBGMesh, rheaTex, rheaMat, rheaMesh, hillTreeTex, hillTreeMat, hillTreeMesh, hillBGTex, hillBGMat, hillMGMesh	
+	var numTexturesToLoad = 0
+	var isWindowLoaded = false
+	var is3DtexturesLoaded = false
+	const header = $("#menu");
 	var mouseX = 0;
 	var mouseY = 0;
 	const WIDTH = jQuery(window).width()
@@ -61,7 +66,6 @@ jQuery(document).ready(function(){
 
 	// else
 	createPlanes()
-	// createLight()
 	requestAnimationFrame(update)
 	
 	// bind events
@@ -72,28 +76,31 @@ jQuery(document).ready(function(){
 	function createPlanes(){
 		
 		//titan
-		titanTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/titan.png" )
-		const titanMat = new THREE.MeshBasicMaterial({ map: titanTex, transparent: true })
+		titanTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/titan.png", on3DtextureLoaded)
+		numTexturesToLoad++
+		titanMat = new THREE.MeshBasicMaterial({ map: titanTex, transparent: true })
+		titanMesh = new THREE.Mesh( new THREE.PlaneGeometry(97,97), titanMat)
 		titanMat.opacity = 0
-		const titanMesh = new THREE.Mesh( new THREE.PlaneGeometry(97,97), titanMat)
 		titanMesh.position.z = -500
 		titanMesh.position.y = 72
 		scene.add(titanMesh)
 		
 		//wordmark
-		wordmarkTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/wordmark.png" )
-		const wordmarkMat = new THREE.MeshBasicMaterial({ map: wordmarkTex, transparent: true })
+		wordmarkTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/wordmark.png", on3DtextureLoaded)
+		numTexturesToLoad++		
+		wordmarkMat = new THREE.MeshBasicMaterial({ map: wordmarkTex, transparent: true })
+		wordmarkMesh = new THREE.Mesh( new THREE.PlaneGeometry(100,25.6), wordmarkMat)
 		wordmarkMat.opacity = 0
-		const wordmarkMesh = new THREE.Mesh( new THREE.PlaneGeometry(100,25.6), wordmarkMat)
 		wordmarkMesh.position.z = -370
 		wordmarkMesh.position.y = 49
 		scene.add(wordmarkMesh)
 		
 		//saturn
-		saturnTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/saturn.png" )
-		const saturnMat = new THREE.MeshBasicMaterial({ map: saturnTex, transparent: true })
+		saturnTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/saturn.png", on3DtextureLoaded)
+		numTexturesToLoad++		
+		saturnMat = new THREE.MeshBasicMaterial({ map: saturnTex, transparent: true })
+		saturnMesh = new THREE.Mesh( new THREE.PlaneGeometry(1000,548), saturnMat)
 		saturnMat.opacity = 0
-		const saturnMesh = new THREE.Mesh( new THREE.PlaneGeometry(1000,548), saturnMat)
 		saturnMesh.position.z = -2500
 		saturnMesh.position.y = 580
 		saturnMesh.scale.x = 2.7
@@ -101,10 +108,11 @@ jQuery(document).ready(function(){
 		scene.add(saturnMesh)
 		
 		//saturn
-		saturnBGTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/saturn_bg.png" )
-		const saturnBGMat = new THREE.MeshBasicMaterial({ map: saturnBGTex, transparent: true })
+		saturnBGTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/saturn_bg.png", on3DtextureLoaded)
+		numTexturesToLoad++		
+		saturnBGMat = new THREE.MeshBasicMaterial({ map: saturnBGTex, transparent: true })
+		saturnBGMesh = new THREE.Mesh( new THREE.PlaneGeometry(1024,600), saturnBGMat)
 		saturnBGMat.opacity = 0
-		const saturnBGMesh = new THREE.Mesh( new THREE.PlaneGeometry(1024,600), saturnBGMat)
 		saturnBGMesh.position.z = -3000
 		saturnBGMesh.position.y = 680
 		saturnBGMesh.scale.x = 2.5
@@ -112,73 +120,63 @@ jQuery(document).ready(function(){
 		scene.add(saturnBGMesh)
 		
 		//rhea
-		rheaTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/moon.png" )
-		const rheaMat = new THREE.MeshBasicMaterial({ map: rheaTex, transparent: true })
+		rheaTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/moon.png", on3DtextureLoaded)
+		numTexturesToLoad++		
+		rheaMat = new THREE.MeshBasicMaterial({ map: rheaTex, transparent: true })
+		rheaMesh = new THREE.Mesh( new THREE.PlaneGeometry(22,22), rheaMat)		
 		rheaMat.opacity = 0
-		const rheaMesh = new THREE.Mesh( new THREE.PlaneGeometry(22,22), rheaMat)
 		rheaMesh.position.z = -900
 		rheaMesh.position.x = 130
 		rheaMesh.position.y = 280
 		scene.add(rheaMesh)
 		
 		//hill tree
-		hillTreeTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/hill_tree.png" )
-		const hillTreeMat = new THREE.MeshBasicMaterial({ map: hillTreeTex, transparent: true })
-		const hillTreeMesh = new THREE.Mesh( new THREE.PlaneGeometry(350,350), hillTreeMat)
+		hillTreeTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/hill_tree.png", on3DtextureLoaded)
+		numTexturesToLoad++		
+		hillTreeMat = new THREE.MeshBasicMaterial({ map: hillTreeTex, transparent: true })
+		hillTreeMesh = new THREE.Mesh( new THREE.PlaneGeometry(350,350), hillTreeMat)
 		hillTreeMesh.position.z = -1600
 		hillTreeMesh.position.y = -600
 		scene.add(hillTreeMesh)
 		
 		//hill bg
-		hillBGTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/hill_bg.png" )
-		const hillBGMat = new THREE.MeshBasicMaterial({ map: hillBGTex, transparent: true })
-		const hillBGMesh = new THREE.Mesh( new THREE.PlaneGeometry(2800,2800), hillBGMat)
+		hillBGTex = new THREE.TextureLoader().load( "/wp-content/themes/fth/assets/images/titan_spread/hill_bg.png", on3DtextureLoaded)
+		numTexturesToLoad++		
+		hillBGMat = new THREE.MeshBasicMaterial({ map: hillBGTex, transparent: true })
+		hillBGMesh = new THREE.Mesh( new THREE.PlaneGeometry(2800,2800), hillBGMat)
 		hillBGMesh.position.z = -8000
 		hillBGMesh.position.y = -1850
 		scene.add(hillBGMesh)
-		
-		//
-		// animate in
-		TweenLite.to($('.shroud'), 1, {css:{opacity: 0}, ease: Sine.easeInOut, delay: 10, onComplete:animateIn});
-		
-		function animateIn(){
-			$('.shroud').remove()
-			
-		TweenLite.to(saturnMat, .75, {opacity: 1, ease: Sine.easeInOut})
-		TweenLite.from(saturnMesh.position, 1.5, {z: -2000, ease: Cubic.easeOut})
-		TweenLite.to(saturnBGMat, 2, {opacity: 1, ease: Sine.easeInOut})
-		
-		TweenLite.to(titanMat, 1, {opacity: 1, delay: .5, ease: Sine.easeInOut})
-		TweenLite.from(titanMesh.position, 2, {z: -200, y: 25, delay: .5, ease: Cubic.easeOut})
-		
-		TweenLite.to(wordmarkMat, 1.5, {opacity: 1, delay: 3,  ease: Sine.easeInOut})
-		TweenLite.from(wordmarkMesh.position, 2, {z: -390, y: 52, delay: 3,  ease: Cubic.easeOut})		
-
-		TweenLite.to(rheaMat, 1, {opacity: 1, delay: 1, ease: Sine.easeInOut})
-		}
-		
-		
-	}
-	function createLight(){
-		const pointLight = new THREE.PointLight(0xFFFFFF)
-
-		pointLight.position.x = -100
-		pointLight.position.y = 50
-		pointLight.position.z = 100
-		scene.add(pointLight);
-		renderer.render(scene, camera);
 	}
 
 	//
 	// events
 	var tanFOV = Math.tan( ( ( Math.PI / 180 ) * cameraCSS.fov / 2 ) );
 	var windowHeight = window.innerHeight;
+
+	function loadComplete(){
+		if(is3DtexturesLoaded & isWindowLoaded) TweenLite.to($('.shroud'), 1, {css:{opacity: 0}, ease: Sine.easeInOut, onComplete:animateIn});
+	}
+
+	function animateIn(){
+		$('.shroud').remove()
+		
+		TweenLite.to(saturnMat, .75, {opacity: 1, ease: Sine.easeInOut})
+		TweenLite.from(saturnMesh.position, 1.5, {z: -2000, ease: Cubic.easeOut})
+		TweenLite.to(saturnBGMat, 2, {opacity: 1, ease: Sine.easeInOut})
 	
+		TweenLite.to(titanMat, 1, {opacity: 1, delay: .5, ease: Sine.easeInOut})
+		TweenLite.from(titanMesh.position, 2, {z: -200, y: 25, delay: .5, ease: Cubic.easeOut})
+	
+		TweenLite.to(wordmarkMat, 1.5, {opacity: 1, delay: 3,  ease: Sine.easeInOut})
+		TweenLite.from(wordmarkMesh.position, 2, {z: -390, y: 52, delay: 3,  ease: Cubic.easeOut})		
+
+		TweenLite.to(rheaMat, 1, {opacity: 1, delay: 1, ease: Sine.easeInOut})
+	}
 	$(document).mousemove(function(e){
     mouseX = (e.pageX / WIDTH - .5) * 15
     mouseY = ((e.pageY - jQuery(document).scrollTop()) / WINDOWHEIGHT - .5) * 15
 	})
-	var header = $("#menu");
   $(window).scroll(function() {
     if ($(window).scrollTop() >= 500) {
         header.addClass("hidden")
@@ -186,6 +184,10 @@ jQuery(document).ready(function(){
         header.removeClass("hidden")
     }
   })
+	$(window).load(function(){
+		isWindowLoaded = true
+		loadComplete()
+	})
 	function update(){
 		camera.position.set(0 + mouseX, -jQuery(document).scrollTop() * .1 - mouseY, 0);
 		cameraCSS.position.set(0 + mouseX * .5, 0 + mouseY * .5, 0);
@@ -208,5 +210,13 @@ jQuery(document).ready(function(){
 		camera.updateProjectionMatrix();
 		renderer.setSize (window.innerWidth, HEIGHT );
 		rendererCSS.setSize( window.innerWidth, window.innerHeight ); 
+	}
+	
+	//
+	// utils
+	function on3DtextureLoaded(){
+		numTexturesToLoad--
+		if(numTexturesToLoad == 0) is3DtexturesLoaded = true
+		loadComplete()
 	}
 })

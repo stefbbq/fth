@@ -1,40 +1,46 @@
 .shroud {
 	position: absolute;
-	z-index: 9999;
+	z-index: 1000;
 	top: 0px;
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
 	background: black;
 	
-	img {
-		width: 50px;
-	}
-
-	.a, .b, .c, .a2, .b2, .c2 {
-		width: 104px;
+	.loader {
+		width: 200px;
+		height: 200px;
+		top: calc(50vh - 100px);
+		left: calc(50vw - 100px);		
 		position: fixed;
-		top: calc(50% - 76px);
-		left: calc(50% - 52px);
-		transform-origin: 50% 50%;
+		transform: scale(.65);
+		z-index: 9999;
 		
-		opacity: 0;
-	}
-	.a, .a2 { top: calc(50% - 210px); }
-	.c, .c2 { top: calc(50% - 33px); }
-	.a2 img, .b2 img, .c2 img{
-		transform: scaleX(-1) translateX(-54px);
-	}
-	.b img, .b2 img { opacity: .8;}
-	.c img, .c2 img { opacity: .6;}
+		img { width: 50px; }
+
+		.a, .b, .c, .a2, .b2, .c2 {
+			width: 104px;
+			position: fixed;
+			top: calc(50% - 36px);
+			left: calc(50% - 52px);
+			transform-origin: 50% 50%;
+		
+			opacity: 0;
+		}
+		.a, .a2 { top: calc(50% - 170px); }
+		.c, .c2 { top: calc(50% + 7px); }
+		.a2 img, .b2 img, .c2 img{ transform: scaleX(-1) translateX(-54px); }
+		.b img, .b2 img { opacity: .8;}
+		.c img, .c2 img { opacity: .6;}
 	
-	//animation
-	.a2 { animation: right 3.2s infinite; }
-	.b2 { animation: right 3.2s infinite; animation-delay: .25s; }
-	.c2 { animation: right 3.2s infinite; animation-delay: .5s; }
-	.c { animation: left 3.2s infinite; animation-delay: .75s; }
-	.b { animation: left 3.2s infinite; animation-delay: 1s; }
-	.a { animation: left 3.2s infinite; animation-delay: 1.25s; }
+		//animation
+		.a2 { animation: right 3.2s infinite; }
+		.b2 { animation: right 3.2s infinite; animation-delay: .25s; }
+		.c2 { animation: right 3.2s infinite; animation-delay: .5s; }
+		.c { animation: left 3.2s infinite; animation-delay: .75s; }
+		.b { animation: left 3.2s infinite; animation-delay: 1s; }
+		.a { animation: left 3.2s infinite; animation-delay: 1.25s; }
+	}
 }
 
 @keyframes left {

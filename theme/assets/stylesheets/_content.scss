@@ -3,19 +3,29 @@
 	background: rgba(black, .75);
 	height: 1300px;
 	
+	@media screen and (max-width: 1024px ) { margin-top: 650px; height: 1100px; }
+	@media screen and (max-width: 600px ) { margin-top: 450px; }
+	
 	.wrapper {
 		color: white;
 		margin: 0px auto;
-		width: 1200px;
+		max-width: 1200px;
 		text-align: center;
+		overflow: hidden;
+		
+		p { position: relative; }
 		
 		.aligncenter {
-			margin: 0px auto;
-			display: block;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			
 		}
 		.blocks {
 			display: table;
-			margin: 0px auto;
+			margin: 360px auto 0 auto;
+			
+			@media screen and (max-width: 600px) { margin-top: 260px; }
 		}
 		.front-content {
 			position: relative;
@@ -31,6 +41,12 @@
 			text-transform: uppercase;
 			text-align: center;
 			vertical-align: top;
+			
+			@media screen and (max-width: 600px) {
+				display: block;
+				margin: 0px !important;
+				text-align: left !important;
+			}
 			
 			a {
 				text-decoration: none;
@@ -57,30 +73,34 @@
 				}
 				.hidden-text { 
 					opacity: 0;
+					margin-right: -2px;
+					margin-top: -2px;
 					font-size: 14px;
 					font-family: FuturaMD;
-					letter-spacing: .3em;
+//					letter-spacing: .3em;
 					color: $secondary-text-color;
 					text-transform: lowercase;
 				}
-
-				&:hover { 
-					.cta, .title {
-						color: white;
-						opacity: 1;
-						transition: .3s;
-						animation-timing-function: ease-out;	
-					}
-					.cta {
-						letter-spacing: 1em;
-						margin-right: -1em;
-					}
-					.title {
-						transform: scale(1.1);
-					}
-					.hidden-text {
-						opacity: 1;
-						transition: .3s;
+				
+				@media screen and (min-width: 768px){
+					&:hover { 
+						.cta, .title {
+							color: white;
+							opacity: 1;
+							transition: .3s;
+							animation-timing-function: ease-out;	
+						}
+						.cta {
+							letter-spacing: 1em;
+							margin-right: -1em;
+						}
+						.title {
+							transform: scale(1.1);
+						}
+						.hidden-text {
+							opacity: 1;
+							transition: .3s;
+						}
 					}
 				}
 			}	
@@ -100,6 +120,8 @@
 					font-size: 60px;
 					opacity: .85;
 					transform-origin: 100% 15%;
+					
+					@media screen and (max-width: 600px) { margin-left: -4px }
 				}
 				
 			}
@@ -108,6 +130,10 @@
 				text-align: left;
 				margin-left: 30px;
 				
+				@media screen and (max-width: 600px) { 
+					margin-top: 30px !important; 
+				}
+				
 				.cta {
 					letter-spacing: .7em;	
 					opacity: .8;					
@@ -115,6 +141,8 @@
 				.title {
 					letter-spacing: .25em;
 					transform-origin: 0% 15%;
+					
+					@media screen and (max-width: 600px) { letter-spacing: 0 }
 				}
 			}
 			
@@ -132,40 +160,62 @@
 		
 		//newsletter
 		.newsletter {
-			margin-top: 120px;
+			margin-top: 150px;
 			padding-bottom: 300px;
+			
+			@media screen and (max-width: 600px) {
+				width: 300px;
+				margin: 30px auto 0 auto;
+				text-align: left;
+			}
 			
 			span {
 				font-family: FuturaLT;
 				color: $primary-text-color;
 				font-size: 34px;
 				text-transform: uppercase;
-				letter-spacing: .523em;
+				letter-spacing: .4em;
 				margin-right: -.523em;
 				
 				&:first-child {
 					font-size: 16px;
-					letter-spacing: 1em;
+					letter-spacing: .45em;
 					margin-left: -2px;
 					margin-right: -1em;
+				}
+				
+				@media screen and (max-width: 600px) {
+					font-size: 60px;
+					letter-spacing: -.05em;
+					margin-left: -4px;
+					margin-top: -4px;
+					display: inline-block;
+				
+					&:first-child {
+						letter-spacing: .6em;
+						margin-left: 0px;
+
+					}
 				}
 			}
 			
 			form {
 				margin-top: 20px;
 				
+				@media screen and (max-width: 600px) { margin: 0px -4px 0 -4px;}
+				
 				input {
 					margin: 0 2px;
 					padding: 10px;
 					font-size: 18px;
-
 					border-radius: 6px;
 					background: transparent;
 					color: white;
 					text-transform: uppercase;
 					font-family: FuturaLT;
 					outline: none;
-					transition: .2s;					
+					transition: .2s;
+					
 				}
 				
 				p {
@@ -179,6 +229,7 @@
 					letter-spacing: .25em;
 					background: rgba(black, .6);
 					border: 2px solid rgba($primary-text-color, .5);
+					
 					&:hover {
 						border: 2px solid $primary-text-color;
 						transition: .05s;
@@ -186,6 +237,11 @@
 					&:focus {
 						border: 2px solid white;
 						transition: .15s;
+					}
+					
+					@media screen and (max-width: 600px) {
+						width: calc(100% - 30px);
+						margin-bottom: 4px; 
 					}
 				}
 				input[type="submit"]{
@@ -209,9 +265,10 @@
 						transition: .05s;
 						border: 5px solid white;
 					}
+					
+					@media screen and (max-width: 600px) { padding: 10px; }
 				}
 			}
 		}
-	
 	}
 }

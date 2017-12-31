@@ -14,6 +14,7 @@ add_action('wp_enqueue_scripts', 'enqueue_stylesheets');
 function enqueue_javascripts() {
   wp_enqueue_script("jquery");
   // wp_register_script("application", javascript_url("application"), '', false, true);
+  wp_register_script("thing", javascript_url("thing"), '', false, true);	
   wp_register_script("main", javascript_url("main"), '', false, true);
   wp_register_script("CSSplugin", javascript_url("plugins/CSSPlugin.min"), '', false, true);
   wp_register_script("easing", javascript_url("easing/EasePack.min"), '', false, true);
@@ -26,6 +27,7 @@ function enqueue_javascripts() {
 	wp_enqueue_script("TweenLite");
 	wp_enqueue_script("three.min");
 	wp_enqueue_script("CSS3DObject");
+	wp_enqueue_script("thing");	
 	wp_enqueue_script("main");
 }
 

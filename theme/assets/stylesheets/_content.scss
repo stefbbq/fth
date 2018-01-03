@@ -43,6 +43,7 @@
 			vertical-align: top;
 			
 			@media screen and (max-width: 600px) {
+				width: calc(100vw - 40px);
 				display: block;
 				margin: 0px !important;
 				text-align: left !important;
@@ -164,7 +165,7 @@
 			padding-bottom: 300px;
 			
 			@media screen and (max-width: 600px) {
-				width: 300px;
+				width: calc(100vw - 40px);
 				margin: 30px auto 0 auto;
 				text-align: left;
 			}

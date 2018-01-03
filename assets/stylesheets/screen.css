@@ -259,12 +259,13 @@
 @media screen and (max-width: 600px) {
   /* line 36, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .cta-block {
+    width: calc(100vw - 40px);
     display: block;
     margin: 0px !important;
     text-align: left !important;
   }
 }
-/* line 51, ../../theme/assets/stylesheets/_content.scss */
+/* line 52, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .cta-block a {
   text-decoration: none;
   color: #ae9a6e;
@@ -272,25 +273,25 @@
   cursor: pointer;
   overflow: hidden;
 }
-/* line 58, ../../theme/assets/stylesheets/_content.scss */
+/* line 59, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .cta-block a .cta, .content .wrapper .cta-block a .title, .content .wrapper .cta-block a .hidden-text {
   transition: .2s;
   animation-timing-function: ease-in-out;
 }
-/* line 62, ../../theme/assets/stylesheets/_content.scss */
+/* line 63, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .cta-block a .cta {
   font-size: 16px;
   letter-spacing: .7em;
   opacity: .75;
 }
-/* line 67, ../../theme/assets/stylesheets/_content.scss */
+/* line 68, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .cta-block a .title {
   margin-top: -8px;
   padding-top: 3px;
   display: block;
   font-size: 60px;
 }
-/* line 74, ../../theme/assets/stylesheets/_content.scss */
+/* line 75, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .cta-block a .hidden-text {
   opacity: 0;
   margin-right: -2px;
@@ -301,80 +302,80 @@
   text-transform: lowercase;
 }
 @media screen and (min-width: 768px) {
-  /* line 87, ../../theme/assets/stylesheets/_content.scss */
+  /* line 88, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .cta-block a:hover .cta, .content .wrapper .cta-block a:hover .title {
     color: white;
     opacity: 1;
     transition: .3s;
     animation-timing-function: ease-out;
   }
-  /* line 93, ../../theme/assets/stylesheets/_content.scss */
+  /* line 94, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .cta-block a:hover .cta {
     letter-spacing: 1em;
     margin-right: -1em;
   }
-  /* line 97, ../../theme/assets/stylesheets/_content.scss */
+  /* line 98, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .cta-block a:hover .title {
     transform: scale(1.1);
   }
-  /* line 100, ../../theme/assets/stylesheets/_content.scss */
+  /* line 101, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .cta-block a:hover .hidden-text {
     opacity: 1;
     transition: .3s;
   }
 }
-/* line 108, ../../theme/assets/stylesheets/_content.scss */
+/* line 109, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .cta-block.daybreak {
   text-align: right;
   margin-right: 30px;
 }
-/* line 112, ../../theme/assets/stylesheets/_content.scss */
+/* line 113, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .cta-block.daybreak .cta {
   font-size: 16px;
   letter-spacing: .7em;
   margin-right: -.7em;
   opacity: .75;
 }
-/* line 119, ../../theme/assets/stylesheets/_content.scss */
+/* line 120, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .cta-block.daybreak .title {
   font-size: 60px;
   opacity: .85;
   transform-origin: 100% 15%;
 }
 @media screen and (max-width: 600px) {
-  /* line 119, ../../theme/assets/stylesheets/_content.scss */
+  /* line 120, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .cta-block.daybreak .title {
     margin-left: -4px;
   }
 }
-/* line 129, ../../theme/assets/stylesheets/_content.scss */
+/* line 130, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .cta-block.trailer {
   text-align: left;
   margin-left: 30px;
 }
 @media screen and (max-width: 600px) {
-  /* line 129, ../../theme/assets/stylesheets/_content.scss */
+  /* line 130, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .cta-block.trailer {
     margin-top: 30px !important;
   }
 }
-/* line 137, ../../theme/assets/stylesheets/_content.scss */
+/* line 138, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .cta-block.trailer .cta {
   letter-spacing: .7em;
   opacity: .8;
 }
-/* line 141, ../../theme/assets/stylesheets/_content.scss */
+/* line 142, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .cta-block.trailer .title {
   letter-spacing: .25em;
   transform-origin: 0% 15%;
 }
 @media screen and (max-width: 600px) {
-  /* line 141, ../../theme/assets/stylesheets/_content.scss */
+  /* line 142, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .cta-block.trailer .title {
     letter-spacing: 0;
   }
 }
-/* line 150, ../../theme/assets/stylesheets/_content.scss */
+/* line 151, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .cta-block-divider {
   opacity: .2;
   margin: -55px 29px 0 32px;
@@ -385,20 +386,20 @@
   height: 200px;
   border-spacing: 20px;
 }
-/* line 162, ../../theme/assets/stylesheets/_content.scss */
+/* line 163, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .newsletter {
   margin-top: 150px;
   padding-bottom: 300px;
 }
 @media screen and (max-width: 600px) {
-  /* line 162, ../../theme/assets/stylesheets/_content.scss */
+  /* line 163, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .newsletter {
-    width: 300px;
+    width: calc(100vw - 40px);
     margin: 30px auto 0 auto;
     text-align: left;
   }
 }
-/* line 172, ../../theme/assets/stylesheets/_content.scss */
+/* line 173, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .newsletter span {
   font-family: FuturaLT;
   color: #ae9a6e;
@@ -407,7 +408,7 @@
   letter-spacing: .4em;
   margin-right: -.523em;
 }
-/* line 180, ../../theme/assets/stylesheets/_content.scss */
+/* line 181, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .newsletter span:first-child {
   font-size: 16px;
   letter-spacing: .45em;
@@ -415,7 +416,7 @@
   margin-right: -1em;
 }
 @media screen and (max-width: 600px) {
-  /* line 172, ../../theme/assets/stylesheets/_content.scss */
+  /* line 173, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .newsletter span {
     font-size: 60px;
     letter-spacing: -.05em;
@@ -423,23 +424,23 @@
     margin-top: -4px;
     display: inline-block;
   }
-  /* line 194, ../../theme/assets/stylesheets/_content.scss */
+  /* line 195, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .newsletter span:first-child {
     letter-spacing: .6em;
     margin-left: 0px;
   }
 }
-/* line 202, ../../theme/assets/stylesheets/_content.scss */
+/* line 203, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .newsletter form {
   margin-top: 20px;
 }
 @media screen and (max-width: 600px) {
-  /* line 202, ../../theme/assets/stylesheets/_content.scss */
+  /* line 203, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .newsletter form {
     margin: 0px -4px 0 -4px;
   }
 }
-/* line 207, ../../theme/assets/stylesheets/_content.scss */
+/* line 208, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .newsletter form input {
   margin: 0 2px;
   padding: 10px;
@@ -452,37 +453,37 @@
   outline: none;
   transition: .2s;
 }
-/* line 221, ../../theme/assets/stylesheets/_content.scss */
+/* line 222, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .newsletter form p {
   color: white;
   opacity: .5;
   font-family: FuturaLT;
 }
-/* line 227, ../../theme/assets/stylesheets/_content.scss */
+/* line 228, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .newsletter form input[type="email"] {
   width: 360px;
   letter-spacing: .25em;
   background: rgba(0, 0, 0, 0.6);
   border: 2px solid rgba(174, 154, 110, 0.5);
 }
-/* line 233, ../../theme/assets/stylesheets/_content.scss */
+/* line 234, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .newsletter form input[type="email"]:hover {
   border: 2px solid #ae9a6e;
   transition: .05s;
 }
-/* line 237, ../../theme/assets/stylesheets/_content.scss */
+/* line 238, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .newsletter form input[type="email"]:focus {
   border: 2px solid white;
   transition: .15s;
 }
 @media screen and (max-width: 600px) {
-  /* line 227, ../../theme/assets/stylesheets/_content.scss */
+  /* line 228, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .newsletter form input[type="email"] {
     width: calc(100% - 30px);
     margin-bottom: 4px;
   }
 }
-/* line 247, ../../theme/assets/stylesheets/_content.scss */
+/* line 248, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .newsletter form input[type="submit"] {
   cursor: pointer;
   letter-spacing: .1em;
@@ -491,7 +492,7 @@
   transition: .2s;
   color: rgba(174, 154, 110, 0.9);
 }
-/* line 255, ../../theme/assets/stylesheets/_content.scss */
+/* line 256, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .newsletter form input[type="submit"]:hover {
   background: rgba(255, 255, 255, 0.1);
   border: 5px solid #ae9a6e;
@@ -500,14 +501,14 @@
   color: rgba(255, 255, 255, 0.9);
   animation-timing-function: ease-in-out;
 }
-/* line 263, ../../theme/assets/stylesheets/_content.scss */
+/* line 264, ../../theme/assets/stylesheets/_content.scss */
 .content .wrapper .newsletter form input[type="submit"]:focus {
   color: white;
   transition: .05s;
   border: 5px solid white;
 }
 @media screen and (max-width: 600px) {
-  /* line 247, ../../theme/assets/stylesheets/_content.scss */
+  /* line 248, ../../theme/assets/stylesheets/_content.scss */
   .content .wrapper .newsletter form input[type="submit"] {
     padding: 10px;
   }

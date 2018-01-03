@@ -201,9 +201,9 @@ $(document).ready(function(){
 			TweenLite.to($('.patch'), .5, {opacity: 1, scaleX: 1, scaleY: 1, ease: Sine.easeOut, delay: 3.5, onComplete: removeShroud})
 			
 			// system
-			const delayOffset = 4
+			const delayOffset = 2.5
 
-			TweenLite.to(saturnMat, .75, {opacity: 1, delay: delayOffset, ease: Sine.easeInOut})
+			TweenLite.to(saturnMat, 1.25, {opacity: 1, delay: delayOffset, ease: Sine.easeInOut})
 			TweenLite.from(saturnMesh.position, 1.5, {z: -2000, delay: delayOffset, ease: Cubic.easeOut})
 			TweenLite.to(saturnBGMat, 2, {opacity: 1, delay: delayOffset, ease: Sine.easeInOut})
 

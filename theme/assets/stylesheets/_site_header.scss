@@ -80,6 +80,7 @@
 		
 		@media screen and (max-width: 1024px) { right: 30px; bottom: -14px; }
 //		@media screen and (max-width: 768px) { right: 20px; }
+		@media screen and (max-width: 600px) { display: none; }
 	
 		a { 
 			opacity: .5;

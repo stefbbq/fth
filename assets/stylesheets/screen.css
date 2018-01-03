@@ -683,7 +683,13 @@ canvas {
     bottom: -14px;
   }
 }
-/* line 84, ../../theme/assets/stylesheets/_site_header.scss */
+@media screen and (max-width: 600px) {
+  /* line 76, ../../theme/assets/stylesheets/_site_header.scss */
+  #menu .social-items {
+    display: none;
+  }
+}
+/* line 85, ../../theme/assets/stylesheets/_site_header.scss */
 #menu .social-items a {
   opacity: .5;
   margin: 0 -20px;
@@ -692,7 +698,7 @@ canvas {
   animation-timing-function: ease-in-out;
   transition: .4s;
 }
-/* line 92, ../../theme/assets/stylesheets/_site_header.scss */
+/* line 93, ../../theme/assets/stylesheets/_site_header.scss */
 #menu .social-items a:hover {
   transform: scale(0.5);
   opacity: 1;
@@ -700,7 +706,7 @@ canvas {
   transition: .2s;
 }
 
-/* line 103, ../../theme/assets/stylesheets/_site_header.scss */
+/* line 104, ../../theme/assets/stylesheets/_site_header.scss */
 #border {
   width: calc(100vw - 60px);
   height: calc(100vh - 60px);
@@ -709,12 +715,12 @@ canvas {
   color: white;
 }
 @media screen and (max-width: 1024px) {
-  /* line 103, ../../theme/assets/stylesheets/_site_header.scss */
+  /* line 104, ../../theme/assets/stylesheets/_site_header.scss */
   #border {
     border: none;
   }
 }
-/* line 116, ../../theme/assets/stylesheets/_site_header.scss */
+/* line 117, ../../theme/assets/stylesheets/_site_header.scss */
 #border .patch {
   width: 100px;
   height: 100px;
@@ -725,14 +731,14 @@ canvas {
   bottom: 20px;
 }
 @media screen and (max-width: 1024px) {
-  /* line 116, ../../theme/assets/stylesheets/_site_header.scss */
+  /* line 117, ../../theme/assets/stylesheets/_site_header.scss */
   #border .patch {
     left: 0px;
     bottom: 0px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 116, ../../theme/assets/stylesheets/_site_header.scss */
+  /* line 117, ../../theme/assets/stylesheets/_site_header.scss */
   #border .patch {
     left: -12px;
     bottom: -12px;
@@ -741,7 +747,7 @@ canvas {
   }
 }
 
-/* line 137, ../../theme/assets/stylesheets/_site_header.scss */
+/* line 138, ../../theme/assets/stylesheets/_site_header.scss */
 #border-faded {
   width: calc(100vw - 60px + 15px);
   height: calc(100vh - 60px + 15px);
@@ -750,7 +756,7 @@ canvas {
   color: white;
 }
 @media screen and (max-width: 1024px) {
-  /* line 137, ../../theme/assets/stylesheets/_site_header.scss */
+  /* line 138, ../../theme/assets/stylesheets/_site_header.scss */
   #border-faded {
     border: none;
   }
